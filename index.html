@@ -25,8 +25,14 @@
     </div>
     <div class="todo-container">
         <h2 id="todo-title">Current To-Do</h2> 
-        <textarea id="testarea" name="testarea" rows="10" cols="20"></textarea>
-        <button id="printToDo" type="button">Print TODO</button><br>
+        <form id="task-list">
+            <select id="task-dropdown" name="task-dropdown" size="10">
+                
+            </select>
+        </form>
+
+        <button id="printToDo" type="button">Print TODO</button>
+        <button id="deleteTask" type="button">Delete Task</button>
 
     </div>
     <script type="module" src="js/taskObject.js"></script>

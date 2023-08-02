@@ -1,12 +1,18 @@
 class Task {
-    constructor(date, time, text, taskCompleted = false){
+    constructor(date, time, text, id, taskCompleted = false){
         this._date = date;
         this._time = time;
         this._text = text;
         this._taskCompleted = taskCompleted
+        this._id = id
     }
 
-
+    get taskId(){
+        return this._id
+    }
+    set taskId(num){
+        this._id = num
+    }
     get taskCompleted(){
         return this._taskCompleted
     }
@@ -45,10 +51,11 @@ class Task {
 
     toPlainObject() {
         return {
-          date: this.date,
-          time: this.time,
-          text: this.text,
-          taskCompleted: this.taskCompleted,
+          id: this._id,
+          date: this._date,
+          time: this._time,
+          text: this._text,
+          taskCompleted: this._taskCompleted,
         };
       }
 }
